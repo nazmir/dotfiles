@@ -137,3 +137,5 @@ Desktop/
 Downloads/
 dev/
 zshrc
+.config/sway/wallpapers/*
+.config/systemd/

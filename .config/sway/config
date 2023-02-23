@@ -18,7 +18,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term foot
+set $term kitty
 set $gnome-schema org.gnome.desktop.interface
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -39,7 +39,7 @@ set $gnome-schema org.gnome.desktop.interface
 output HDMI-A-1 {
     resolution 3840x2160@120Hz
     position 1890,0
-    scale 1.75
+    scale 1.5
 }
 
 Output eDP-1 {
@@ -98,6 +98,7 @@ exec_always {
     gsettings set $gnome-schema gtk-theme 'Arc-Dark'
     gsettings set $gnome-schema icon-theme 'Papirus'
 }
+
 
 ### Key bindings
 #
@@ -232,7 +233,7 @@ bindsym $mod+Shift+Ctrl+0 move container to workspace number 0; workspace number
 default_border pixel 3
 # client.focused #4c7899 #285577 #ffffff #2e9ef4 #01fd1b
 default_floating_border normal 2
-gaps inner 5
+gaps inner 3
 
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
@@ -333,4 +334,7 @@ bar {
     bindswitch --reload --locked lid:on output eDP-1 disable
     bindswitch --reload --locked lid:off output eDP-1 enable
 
+
+#Exec dbus variables
+exec $HOME/.config/sway/scripts/sway-init.sh
 include /etc/sway/config.d/*
