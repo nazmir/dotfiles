@@ -143,9 +143,12 @@ bindsym $mod+x exec nwg-bar -t bar.json
 bindsym XF86AudioRaiseVolume exec pamixer -i 1
 bindsym XF86AudioLowerVolume exec pamixer -d 1
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+#bindsym XF86AudioMute exec pamixer --default-source -t
+bindsym XF86AudioMicMute exec pamixer --source 5 -t
 bindcode 248 exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym Shift+XF86AudioRaiseVolume exec pamixer --default-source -i 1
 bindsym Shift+XF86AudioLowerVolume exec pamixer --default-source -d 1
+bindsym Shift+XF86AudioMicMute exec pamixer --source 5 -t
 
 bindsym XF86MonBrightnessDown exec brightnessctl -q set 3%-
 bindsym XF86MonBrightnessUp exec brightnessctl -q set +3%
