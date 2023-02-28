@@ -45,7 +45,7 @@ output HDMI-A-1 {
 Output eDP-1 {
     resolution 3840x2160@60Hz
     position 0,0
-    scale 2
+    scale 2.25
 }
 
 
@@ -73,6 +73,7 @@ input type:touchpad {
     tap enabled
     natural_scroll enabled
     tap_button_map lrm
+#	pointer_accel 0.5
 }
 
 
@@ -236,7 +237,7 @@ bindsym $mod+Shift+Ctrl+0 move container to workspace number 0; workspace number
 default_border pixel 3
 # client.focused #4c7899 #285577 #ffffff #2e9ef4 #01fd1b
 default_floating_border normal 2
-gaps inner 3
+gaps inner 1
 
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
