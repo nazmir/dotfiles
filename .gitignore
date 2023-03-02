@@ -144,3 +144,10 @@ zshrc
 .config/sway/config.save
 .config/trashrc
 .config/PlasmaUserFeedback
+.config.bkup/
+.profile
+.sudo_as_admin_successful
+.zcompdump-mir-thinkpad-ubuntu-5.8.1
+.zcompdump-mir-thinkpad-ubuntu-5.8.1.zwc
+.zshrc.bkup
+snap/
