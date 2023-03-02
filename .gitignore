@@ -151,3 +151,5 @@ zshrc
 .zcompdump-mir-thinkpad-ubuntu-5.8.1.zwc
 .zshrc.bkup
 snap/
+.config/enchant/
+.lesshst
