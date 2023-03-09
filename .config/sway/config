@@ -115,7 +115,12 @@ bindsym $mod+q kill
 
 # Start your launcher
 #bindsym $mod+d exec wofi --show=drun
-bindsym $mod+d exec fuzzel
+#bindsym $mod+d exec fuzzel
+#Install sway-desktop-launcher from AUR and Kitty for this to work
+for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 30 ppt, border pixel 5
+set $menu exec $term --class=launcher sway-launcher-desktop
+bindsym $mod+d exec $menu
+
 
 # Start your browser
 bindsym $mod+w exec google-chrome-stable
