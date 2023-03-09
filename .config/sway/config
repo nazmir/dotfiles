@@ -22,8 +22,8 @@ set $term /usr/bin/kitty
 set $gnome-schema org.gnome.desktop.interface
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# on the oiginal workspace that the command was run on.
+#set $menu fuzzel | fuzzel | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -38,14 +38,14 @@ set $gnome-schema org.gnome.desktop.interface
 
 output HDMI-A-1 {
     resolution 3840x2160@120Hz
-    position 1890,0
+    position 1920,0
     scale 1.5
 }
 
 Output eDP-1 {
     resolution 3840x2160@60Hz
     position 0,0
-    scale 2.25
+    scale 2
 }
 
 
@@ -82,10 +82,11 @@ input type:touchpad {
 #
 #
 
-exec swayidle -w \
-     timeout 300 'swaylock -f -i $HOME/.config/sway/wallpapers/lockscreen_wallpaper.jpg' \
-     timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-     before-sleep 'swaylock -f -c 000000'
+#exec swayidle -w \
+#     timeout 300 'swaylock -f -i $HOME/.config/sway/wallpapers/lockscreen_wallpaper.jpg' \
+#     timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+#     before-sleep 'swaylock -f -c 000000'
+
 exec_always $HOME/.config/sway/scripts/get_bing_image.sh
 #exec /usr/lib/geoclue-2.0/demos/agent
 #exec gammastep -m wayland
@@ -113,7 +114,8 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
 # Start your launcher
-bindsym $mod+d exec wofi --show=drun
+#bindsym $mod+d exec wofi --show=drun
+bindsym $mod+d exec fuzzel
 
 # Start your browser
 bindsym $mod+w exec google-chrome-stable
