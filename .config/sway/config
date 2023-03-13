@@ -18,7 +18,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term /usr/bin/kitty
+set $term /usr/bin/kitty --single-instance
 set $gnome-schema org.gnome.desktop.interface
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
